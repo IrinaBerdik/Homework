@@ -7,8 +7,7 @@ if (number>1000 && number <100000)
     if (num [4] == num [0] && num [3] == num [1])   
         {
          Console.WriteLine("Pallindrom");
-     
-        }
+             }
     else Console.WriteLine("no Pallindrom");
 else Console.WriteLine("число не является пятизначным");
 
