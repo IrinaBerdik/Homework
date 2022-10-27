@@ -42,15 +42,34 @@ void PrintArray(int[,] array)
 }
 
 int [,] ProdArray (int[,] array1, int[,] array2)
+
 {
-    if (array1.GetLength(1)==array2.GetLength(0))
+    if  ((array1.GetLength(1)==array2.GetLength(0))==true) 
     {
-        int [,] newArray = new int [array1.GetLength(1),array2.GetLength(0)];
+        int [,] newArray = new int [array1.GetLength(0),array2.GetLength(1)];
+        
+        for (int i=0; i<array1.GetLength(0); i++)  
+        {  
+            for (int j=0; j<array2.GetLength(1); j++)
+            {
+                for (int k=0; k<array2.GetLength(0); k++)
+                {
+                    newArray[i,j]+=array1[i,k]*array2[k,j];
 
-        newArray[0,0]=(array1[0,0]*array2[0,0]+array1[0,1]*array1[1,0]+....
-
-
-
+                }
+            }
+        }
+        return newArray;
     }
     else Console.WriteLine("Не возможно перемножить матрицы");
+    return array1;
 }
+
+int [,] array1= GetArray(m1,n1);
+int [,] array2= GetArray(m2,n2);
+PrintArray(array1);
+PrintArray(array2);
+PrintArray(ProdArray(array1,array2));
+
+
+
