@@ -29,10 +29,13 @@ int[,,] GetArray(int l, int m, int n)
                 {    
                     for (int c = 0; c <= i; c++)
                     {
-                         for (int d = 0; d <j ; d++)
+                         for (int d = 0; d < j ; d++)
                         {                
                             if (array [b,c,d]== array[k,i,j]) 
+                            {
                             array[k,i,j] = rnd.Next(10,100);
+                            d=0;c=0; d=0;
+                            }
                             else array [k,i,j]=e;
                          }
                     }
@@ -43,24 +46,7 @@ int[,,] GetArray(int l, int m, int n)
  return array;
 }
     
-    /*for (k=0; k<array.GetLength(0);k++)    
-    {    
-        for (i = 0; i < array.GetLength(1); i++)
-        {
-            for (int j = 0; j < array.GetLength(2); j++)
-            {                
-                if (a == array[i,j,k]) 
-                a = rnd.Next(0,100);
-                i=i-1; k=k-1; j=j-1;
-            }
-        }
-    }*/
-              
-    
-    
-
-
-
+   
 void PrintArray(int[,,] array)
 {  
     for (int k=0; k<array.GetLength(2);k++)    
@@ -69,7 +55,7 @@ void PrintArray(int[,,] array)
         {
             for (int j = 0; j < array.GetLength(1); j++)
             {
-                Console .Write (array [i,j,k]+" (" + i + j +k+ " )");
+                Console .Write (array [i,j,k]+" (" + i + j + k + " )");
                 
             }
             Console.WriteLine();
