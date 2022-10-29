@@ -13,57 +13,26 @@ int m = int.Parse(Console.ReadLine());
 int[,] GetArray(int m)
 {
     int[,] array = new int[m, m];
-   int c=10;
-   int j;
-
-    
-        int i=0; 
-        for ( j = 0; j < m; j++)
-        {
-            array[ i, j] = c+1;
-            c++;
-        }
-        j=m-1;
-        for ( i = 1; i < m; i++)
-        {
-             array[ i, j] = c+1;
-            c++;
-        }
-        i=m-1;
-        for ( j = m-2; j >=0 ; j--)
-        {
-             array[ i, j] = c+1;
-            c++;
-        }
-        j=0;    
-        for (i = m-2; i > 0; i--)
-        {
-             array[ i, j] = c+1;
-            c++;
-        }
-
-        i=1;
-        for (j = 1; j < m-1; j++)
-        {
-             array[ i, j] = c+1;
-            c++;
-        }
-        
-         j=2;    
-        for (i =2 ; i < m-1; i++)
-        {
-             array[ i, j] = c+1;
-            c++;
-        }
-        i=2;
-        for (j = 1; j > m-4; j--)
-        {
-             array[ i, j] = c+1;
-            c++;
-        }
-       
+   int c=10; int i=0; int j=0;
+   int count;
+    while (m>1)  
+   {
+        for (count =0; count<m-1;count ++)
+                 { array [i,j]=c; c++;j++; } 
+        for (count = 0; count<m-1;count ++)
+                 {array[ i, j] = c; c++; i++;} 
+        for (count =0; count<m-1; count ++)
+                 {array[ i, j] = c; c++; j--; } 
+        for (count =0; count<m-1; count ++)
+                 {array[ i, j] = c; c++; i--;} 
+       i++; j++;
+       m-=2;
+   }
     return array;
 }
+
+
+
 
 void PrintArray(int[,] array)
 {
@@ -79,3 +48,28 @@ void PrintArray(int[,] array)
 }
 
 PrintArray(GetArray(m));
+
+/* while (j<ijmax) {array [i,j]=c; c++; j++;} 
+            i++; 
+                  
+            while (i < ijmax)            
+                {array[ i, j] = c; c++; i++;}
+            j--;
+                
+            while (j>ijmin) 
+                    {array[ i, j] = c; c++; j--;} 
+
+            i--;
+                
+            while (i>ijmin+1)
+                        {array[ i, j] = c; c++; i--;}
+
+            ijmin++; ijmax--;
+                
+            
+             m-=2;*/
+
+
+
+
+
