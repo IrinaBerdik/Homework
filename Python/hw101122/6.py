@@ -10,12 +10,13 @@ if a_1>a_2:
     mini=a_2
 else:
     maxi=a_2
-    mini=a_1  
-nod=maxi   
+    mini=a_1   
 while (True):
         if maxi%mini!=0:
          maxi+=maxi
-        if maxi%mini==0: print(maxi)
+        if maxi%mini==0: 
+            break
+print(maxi)
 
 
      
