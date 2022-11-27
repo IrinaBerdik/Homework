@@ -7,3 +7,6 @@ a = list(map(int, input("Введите числа через пробел:\n").
 new_a=list(filter(lambda x: not x%2 , a))
 print(sum(map(int, new_a)))
 
+
+
+
