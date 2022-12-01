@@ -3,7 +3,7 @@
 # import tele_bot 
 
 
-# app = ApplicationBuilder().token('5675955290:AAHwpOCxMIyL8pd77HW_jXEWzMu8ahW_j2E').build()
+# app = ApplicationBuilder().token('TOKEN').build()
 
 
 
